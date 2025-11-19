@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-kashmiri-saffron: #FF9933;
+  --color-kashmiri-chinar: #A52A2A;
+  --color-kashmiri-dal: #008080;
+  --color-kashmiri-wood: #5C4033;
+  --color-kashmiri-paper: #F5F5DC;
+  
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Merriweather', serif;
+  
+  --image-pattern: url('/images/pattern.png');
+}
+
+@layer base {
+  body {
+    @apply bg-kashmiri-paper text-kashmiri-wood font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
