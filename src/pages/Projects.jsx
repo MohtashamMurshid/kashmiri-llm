@@ -51,6 +51,13 @@ const projects = [
     description: "Digitizing and preserving Kashmir’s written legacy. OCR for Nastaliq and Sharada scripts.",
     image: digitImg,
     outputs: ["Open digital library", "AI transcription services"]
+  },
+  {
+    id: 'k-data-commons',
+    title: "The Kashmiri Data Commons (K-Data Commons) Digital Repository",
+    description: "A trusted, ethical, and fully open-source data portal centralizing and standardizing Kashmiri cultural and linguistic datasets.",
+    image: digitImg,
+    outputs: ["Zunn-Daan Public Portal", "Seven Standardized Datasets", "Standardized Metadata"]
   }
 ];
 

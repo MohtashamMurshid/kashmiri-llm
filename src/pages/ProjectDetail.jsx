@@ -11,6 +11,7 @@ import languageTutorMd from '../content/projects/language-tutor.md?raw';
 import geoMapMd from '../content/projects/geo-map.md?raw';
 import oralHistoryMd from '../content/projects/oral-history.md?raw';
 import digitizationMd from '../content/projects/digitization.md?raw';
+import kDataCommonsMd from '../content/projects/k-data-commons.md?raw';
 
 const contentMap = {
   'k-llm': kLlmMd,
@@ -19,6 +20,7 @@ const contentMap = {
   'geo-map': geoMapMd,
   'oral-history': oralHistoryMd,
   'digitization': digitizationMd,
+  'k-data-commons': kDataCommonsMd,
 };
 
 const ProjectDetail = () => {
