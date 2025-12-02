@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
 import Features from '../components/Features';
-import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -12,22 +11,17 @@ const Home = () => {
       
       {/* Executive Summary */}
       <section className="py-20 container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center"
-        >
+        <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-serif text-kashmiri-chinar mb-8">The Kashmiri AI Heritage Initiative</h2>
           <p className="text-xl text-gray-700 leading-relaxed mb-8">
             Preserving, revitalizing, and celebrating the language, art, culture, and collective memory of Kashmir through ethical, open, community-owned AI systems.
           </p>
           <p className="text-lg text-gray-600 leading-relaxed mb-12">
-            Kashmir possesses one of South Asia’s richest yet most endangered cultural ecosystems. 
+            Kashmir possesses one of South Asia's richest yet most endangered cultural ecosystems. 
             This initiative proposes a suite of six integrated AI-driven projects to safeguard this heritage, 
             democratize access, and empower future generations.
           </p>
-        </motion.div>
+        </div>
       </section>
 
       <Features />

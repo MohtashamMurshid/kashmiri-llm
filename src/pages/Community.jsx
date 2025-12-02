@@ -1,21 +1,16 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Users, Handshake, ShieldCheck } from 'lucide-react';
 
 const Community = () => {
   return (
     <div className="min-h-screen bg-stone-50 pt-24 pb-20">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h1 className="text-5xl font-serif text-kashmiri-chinar mb-6">Community & Governance</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             A sovereign, community-rooted ecosystem driven by the people of Kashmir.
           </p>
-        </motion.div>
+        </div>
 
         {/* Community Involvement */}
         <section className="mb-20">

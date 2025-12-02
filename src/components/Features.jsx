@@ -1,22 +1,26 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { BookOpen, MessageCircle, PenTool } from 'lucide-react';
+import { Users, Heart, GraduationCap, Shield } from 'lucide-react';
 
 const features = [
   {
-    title: "Native Kashmiri Support",
-    description: "The first LLM trained specifically on the nuances of the Kashmiri language (Koshur), understanding dialects and script.",
-    icon: MessageCircle,
+    title: "Community-Owned AI",
+    description: "Built by and for Kashmiris. Volunteers, artisans, scholars, and diaspora co-create datasets, ensuring authentic representation and cultural sovereignty.",
+    icon: Users,
   },
   {
-    title: "Cultural Deep Dive",
-    description: "Embedded with knowledge of Kashmiri history, architecture, cuisine, and traditions, preserving the essence of the Valley.",
-    icon: BookOpen,
+    title: "Cultural Preservation",
+    description: "Protecting endangered heritage through six integrated projects: from oral histories and manuscripts to crafts and language revitalization.",
+    icon: Heart,
   },
   {
-    title: "Poetic Generation",
-    description: "Capable of generating poetry in the style of legends like Lal Ded, Habba Khatoon, and Sheikh-ul-Alam.",
-    icon: PenTool,
+    title: "Educational Empowerment",
+    description: "Free access to Kashmiri language tools, AI tutors for children and diaspora, and rich datasets for researchers and future generations.",
+    icon: GraduationCap,
+  },
+  {
+    title: "Ethical & Open",
+    description: "Data sovereignty ensures all datasets remain the intellectual property of the Kashmiri community, governed transparently with open-source principles.",
+    icon: Shield,
   }
 ];
 
@@ -25,18 +29,14 @@ const Features = () => {
     <section className="py-20 relative z-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif text-kashmiri-chinar mb-4">Features Inspired by Tradition</h2>
+          <h2 className="text-4xl font-serif text-kashmiri-chinar mb-4">Core Principles</h2>
           <div className="w-24 h-1 bg-kashmiri-saffron mx-auto rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
               className="bg-white/80 backdrop-blur-sm p-8 rounded-2xl shadow-lg border border-kashmiri-wood/10 hover:border-kashmiri-saffron/30 transition-colors group relative overflow-hidden"
             >
               {/* Decorative Chinar Leaf Background */}
@@ -52,7 +52,7 @@ const Features = () => {
               <p className="text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,21 +1,16 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Globe, GraduationCap, TrendingUp, Cpu } from 'lucide-react';
 
 const Impact = () => {
   return (
     <div className="min-h-screen bg-stone-50 pt-24 pb-20">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h1 className="text-5xl font-serif text-kashmiri-chinar mb-6">Expected Impact</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             More than a tech project — a movement to reclaim cultural memory and ensure linguistic survival.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
           {[
@@ -40,11 +35,8 @@ const Impact = () => {
               points: ["First major Kashmiri-focused LLM", "Creation of open datasets", "Model for other under-represented languages"] 
             }
           ].map((item, idx) => (
-            <motion.div 
+            <div 
               key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: idx * 0.1 }}
               className="bg-white p-8 rounded-2xl shadow-sm border border-stone-100 hover:shadow-md transition-shadow"
             >
               <div className="flex items-center gap-4 mb-6">
@@ -61,7 +53,7 @@ const Impact = () => {
                   </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           ))}
         </div>
 

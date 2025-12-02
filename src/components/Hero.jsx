@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroBg from '../../public/images/hero-bg.png';
 
 const Hero = () => {
@@ -26,23 +27,24 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h1 className="text-5xl md:text-7xl font-serif mb-6 drop-shadow-lg">
-            The Spirit of Kashmir <br />
-            <span className="text-kashmiri-saffron italic">in AI</span>
+            The Kashmiri AI <br />
+            <span className="text-kashmiri-saffron italic">Heritage Initiative</span>
           </h1>
           
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto font-light opacity-90">
-            Experience the first Large Language Model trained on the rich heritage, 
-            language, and culture of the Valley.
+            Preserving, revitalizing, and celebrating the language, art, and collective memory of Kashmir through ethical, open AI.
           </p>
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="group bg-kashmiri-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 flex items-center gap-2 mx-auto shadow-lg hover:shadow-kashmiri-saffron/50"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-          </motion.button>
+          <Link to="/projects">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="group bg-kashmiri-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 flex items-center gap-2 mx-auto shadow-lg hover:shadow-kashmiri-saffron/50"
+            >
+              Explore Our Projects
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
 

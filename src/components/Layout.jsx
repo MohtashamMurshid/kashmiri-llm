@@ -19,6 +19,8 @@ const Layout = ({ children }) => {
     setIsMobileMenuOpen(false);
   }, [location]);
 
+  const isDarkBackground = location.pathname === '/' && !isScrolled;
+
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Projects', path: '/projects' },
@@ -44,8 +46,14 @@ const Layout = ({ children }) => {
         }`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-serif font-bold text-kashmiri-chinar">
-            Kashmiri AI
+          <Link to="/" className="flex items-center">
+            <img 
+              src="/images/logo-cropped.png" 
+              alt="Kashmiri AI Logo" 
+              className={`transition-all duration-300 ${
+                isScrolled ? 'h-12' : 'h-14'
+              } w-auto object-contain`}
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -54,8 +62,10 @@ const Layout = ({ children }) => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-kashmiri-saffron ${
-                  location.pathname === link.path ? 'text-kashmiri-saffron' : 'text-gray-600'
+                className={`text-sm font-medium transition-colors ${
+                  location.pathname === link.path 
+                    ? 'text-kashmiri-saffron' 
+                    : isDarkBackground ? 'text-white/90 hover:text-white' : 'text-gray-600 hover:text-kashmiri-saffron'
                 }`}
               >
                 {link.name}
@@ -68,7 +78,7 @@ const Layout = ({ children }) => {
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-gray-600"
+            className={`md:hidden ${isDarkBackground ? 'text-white' : 'text-gray-600'}`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? <X /> : <Menu />}

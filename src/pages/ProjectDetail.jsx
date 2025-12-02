@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Markdown from 'react-markdown';
 import { ArrowLeft } from 'lucide-react';
-import { motion } from 'framer-motion';
 
 // Import markdown files
 import kLlmMd from '../content/projects/k-llm.md?raw';
@@ -46,11 +45,7 @@ const ProjectDetail = () => {
           Back to Projects
         </Link>
 
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-stone-100 prose prose-stone prose-lg max-w-none"
-        >
+        <div className="bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-stone-100 prose prose-stone prose-lg max-w-none">
           <Markdown
             components={{
               h1: ({node, ...props}) => <h1 className="text-4xl font-serif text-kashmiri-chinar mb-6" {...props} />,
@@ -64,7 +59,7 @@ const ProjectDetail = () => {
           >
             {content}
           </Markdown>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

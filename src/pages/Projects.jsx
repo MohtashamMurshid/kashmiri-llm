@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import kLlmImg from '../assets/project_k_llm_1764700251968.png';
@@ -65,24 +64,17 @@ const Projects = () => {
   return (
     <div className="min-h-screen bg-stone-50 pt-24 pb-20">
       <div className="container mx-auto px-4">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="text-center mb-16"
-        >
+        <div className="text-center mb-16">
           <h1 className="text-5xl font-serif text-kashmiri-chinar mb-6">Our Projects</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Six integrated AI-driven initiatives to safeguard heritage, democratize access, and empower future generations.
           </p>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={project.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
               className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-stone-100 flex flex-col"
             >
               <div className="h-48 overflow-hidden">
@@ -116,7 +108,7 @@ const Projects = () => {
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
