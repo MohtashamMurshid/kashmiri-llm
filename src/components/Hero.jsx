@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroBg from '../../public/images/hero-bg.png';
 
 const Hero = () => {
   return (
@@ -12,7 +11,7 @@ const Hero = () => {
         className="absolute inset-0 z-0"
       >
         <img 
-          src={heroBg} 
+          src="/images/hero-bg.png" 
           alt="Kashmiri Heritage AI" 
           className="w-full h-full object-cover"
         />
