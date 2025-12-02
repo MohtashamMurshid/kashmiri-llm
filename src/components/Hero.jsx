@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import heroBg from '../../public/images/hero-bg.png';
 
 const Hero = () => {
   return (
@@ -8,13 +9,13 @@ const Hero = () => {
       {/* Background Image */}
       <div 
         className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url('/images/hero-bg.png')",
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
       >
-        <div className="absolute inset-0 bg-black/40" /> {/* Overlay */}
+        <img 
+          src={heroBg} 
+          alt="Kashmiri Heritage AI" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/50" /> {/* Overlay */}
       </div>
 
       {/* Content */}
@@ -39,7 +40,7 @@ const Hero = () => {
             whileTap={{ scale: 0.95 }}
             className="group bg-kashmiri-saffron hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg font-medium transition-all duration-300 flex items-center gap-2 mx-auto shadow-lg hover:shadow-kashmiri-saffron/50"
           >
-            Try the Model
+            Contact Us
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </motion.button>
         </motion.div>

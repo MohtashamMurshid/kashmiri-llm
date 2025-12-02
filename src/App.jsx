@@ -1,18 +1,25 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import Demo from './components/Demo';
-import Footer from './components/Footer';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
+import ProjectDetail from './pages/ProjectDetail';
+import Community from './pages/Community';
+import Impact from './pages/Impact';
 
 function App() {
   return (
-    <Layout>
-      <Hero />
-      <Features />
-      <Demo />
-      <Footer />
-    </Layout>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/community" element={<Community />} />
+          <Route path="/impact" element={<Impact />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 
